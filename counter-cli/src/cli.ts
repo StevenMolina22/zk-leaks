@@ -23,7 +23,7 @@ import { type CounterProviders, type DeployedCounterContract } from './common-ty
 import { type Config, StandaloneConfig } from './config';
 import * as api from './api';
 
-let logger: Logger;
+let logger: Logger; 
 
 /**
  * This seed gives access to tokens minted in the genesis block of a local development node - only

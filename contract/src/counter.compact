@@ -1,26 +1,48 @@
-// This file is part of midnightntwrk/example-counter.
-// Copyright (C) 2025 Midnight Foundation
-// SPDX-License-Identifier: Apache-2.0
-// Licensed under the Apache License, Version 2.0 (the "License");
-// You may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 pragma language_version >= 0.16 && <= 0.17;
 
 import CompactStandardLibrary;
 
-// public state
+struct Leak {
+  id: Uint<64>,
+  uri: Opaque<"string">,
+  donation_addr: Opaque<"string">,
+  donated: Uint<64>
+}
+
+// Public state
+export ledger leaks: Set<Leak>;
+export ledger nextLeakId: Uint<64>;
 export ledger round: Counter;
 
-// transition function changing public state
+// Constructor
+constructor() {
+  // leaks = default<Set<Leak>>;
+  nextLeakId = 0;
+}
+
+// Create Leak
+export circuit createLeak(uri: Opaque<"string">, donation_addr: Opaque<"string">): [] {
+  const newLeak = Leak {
+    id: nextLeakId,
+    uri: disclose(uri),
+    donation_addr: disclose(donation_addr),
+    donated: 0
+  };
+  leaks.insert(newLeak);
+  round.increment(1);
+}
+
+// Get Leak
+// Direct access by index is not supported for Set, so this function cannot be implemented as before.
+
+// Donate to Leak
+// Similarly, updating a specific element in a Set is not supported by the documented Set operations.
+
+// Counter increment/decrement
 export circuit increment(): [] {
   round.increment(1);
+}
+
+export circuit decrement(): [] {
+  round.decrement(1);
 }
