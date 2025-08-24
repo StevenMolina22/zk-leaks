@@ -11,13 +11,13 @@ struct Leak {
 
 // Public state
 export ledger leaks: Map<Uint<64>, Leak>;
-export ledger nextLeakId: Uint<64>;
+export ledger nextLeakId: Counter;
 export ledger round: Counter;
 
 // Constructor
 constructor() {
   // leaks = default<Set<Leak>>;
-  nextLeakId = 0;
+  // nextLeakId = Counter(0);
 }
 
 // Create Leak
@@ -29,6 +29,7 @@ export circuit createLeak(uri: Opaque<"string">, donation_addr: Opaque<"string">
     donated: 0
   };
   leaks.insert(nextLeakId, newLeak);
+  nextLeakId.increment(1);
   round.increment(1);
 }
 
@@ -37,27 +38,6 @@ export circuit getLeak(id: Uint<64>): Leak {
   assert(leaks.member(disclose(id)), "Leak does not exist");
   return leaks.lookup(disclose(id));
 }
-
-// export circuit donate(id: Uint<64>, amount: Uint<64>): [] {
-//   assert(leaks.member(id), "Leak does not exist");
-//   const leak = leaks.lookup(id);
-//   const updatedLeak = Leak {
-//     id: leak.id,
-//     uri: leak.uri,
-//     donation_addr: leak.donation_addr,
-//     donated: leak.donated + amount
-//   };
-//   leaks.insert(id, updatedLeak);
-// }
-
-
-
-
-// Get Leak
-// Direct access by index is not supported for Set, so this function cannot be implemented as before.
-
-// Donate to Leak
-// Similarly, updating a specific element in a Set is not supported by the documented Set operations.
 
 // Counter increment/decrement
 export circuit increment(): [] {
