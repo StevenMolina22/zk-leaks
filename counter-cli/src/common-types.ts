@@ -17,7 +17,17 @@ import { Counter, type CounterPrivateState } from '@midnight-ntwrk/counter-contr
 import type { ImpureCircuitId, MidnightProviders } from '@midnight-ntwrk/midnight-js-types';
 import type { DeployedContract, FoundContract } from '@midnight-ntwrk/midnight-js-contracts';
 
-export type CounterCircuits = ImpureCircuitId<Counter.Contract<CounterPrivateState>>;
+export interface Leak {
+  id: bigint;
+  uri: string;
+  donation_addr: string;
+  donated: bigint;
+}
+
+export type CounterCircuits = 
+  | ImpureCircuitId<Counter.Contract<CounterPrivateState>>
+  | 'createLeak'
+  | 'getLeak';
 
 export const CounterPrivateStateId = 'counterPrivateState';
 
@@ -25,4 +35,4 @@ export type CounterProviders = MidnightProviders<CounterCircuits, typeof Counter
 
 export type CounterContract = Counter.Contract<CounterPrivateState>;
 
-export type DeployedCounterContract = DeployedContract<CounterContract> | FoundContract<CounterContract>;
+export type DeployedCounterContract = (DeployedContract<CounterContract> | FoundContract<CounterContract>);

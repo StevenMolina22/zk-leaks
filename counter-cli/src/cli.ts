@@ -42,7 +42,9 @@ const MAIN_LOOP_QUESTION = `
 You can do one of the following:
   1. Increment
   2. Display current counter value
-  3. Exit
+  3. Create a new leak
+  4. Get leak by ID
+  5. Exit
 Which would you like to do? `;
 
 const join = async (providers: CounterProviders, rli: Interface): Promise<DeployedCounterContract> => {
@@ -82,6 +84,24 @@ const mainLoop = async (providers: CounterProviders, rli: Interface): Promise<vo
         await api.displayCounterValue(providers, counterContract);
         break;
       case '3':
+        const uri = await rli.question('Enter the leak URI: ');
+        const donationAddr = await rli.question('Enter the donation address: ');
+        await api.createLeak(counterContract, uri, donationAddr);
+        break;
+      case '4':
+        const id = BigInt(await rli.question('Enter the leak ID: '));
+        try {
+          const leak = await api.getLeak(providers, counterContract, id);
+          logger.info(`Leak found:`);
+          logger.info(`  ID: ${leak.id}`);
+          logger.info(`  URI: ${leak.uri}`);
+          logger.info(`  Donation Address: ${leak.donation_addr}`);
+          logger.info(`  Donated: ${leak.donated}`);
+        } catch (error) {
+          logger.error(`Error fetching leak: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        }
+        break;
+      case '5':
         logger.info('Exiting...');
         return;
       default:

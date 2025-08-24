@@ -38,6 +38,7 @@ import { type Logger } from 'pino';
 import * as Rx from 'rxjs';
 import { WebSocket } from 'ws';
 import {
+  Leak,
   type CounterContract,
   type CounterPrivateStateId,
   type CounterProviders,
@@ -391,4 +392,28 @@ export const saveState = async (wallet: Wallet, filename: string) => {
   } else {
     logger.info('Not saving cache as sync cache was not defined');
   }
+};
+
+export const createLeak = async (
+  counterContract: DeployedCounterContract,
+  uri: string,
+  donationAddr: string,
+): Promise<FinalizedTxData> => {
+  logger.info(`Creating new leak with URI: ${uri} and donation address: ${donationAddr}`);
+  const finalizedTxData = await counterContract.callTx.createLeak(uri, donationAddr);
+  
+  logger.info(`Transaction ${finalizedTxData.public.txId} added in block ${finalizedTxData.public.blockHeight}`);
+  return finalizedTxData.public;
+};
+
+export const getLeak = async (
+  providers: CounterProviders,
+  counterContract: DeployedCounterContract,
+  id: bigint,
+): Promise<Leak> => {
+  logger.info(`Fetching leak with ID: ${id}`);
+  const result = await counterContract.callTx.getLeak(id);
+  logger.info(`Successfully fetched leak with ID: ${id}`);
+  return result.private.result;
+
 };

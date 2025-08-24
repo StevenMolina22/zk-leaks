@@ -10,7 +10,7 @@ struct Leak {
 }
 
 // Public state
-export ledger leaks: Set<Leak>;
+export ledger leaks: Map<Uint<64>, Leak>;
 export ledger nextLeakId: Uint<64>;
 export ledger round: Counter;
 
@@ -28,9 +28,30 @@ export circuit createLeak(uri: Opaque<"string">, donation_addr: Opaque<"string">
     donation_addr: disclose(donation_addr),
     donated: 0
   };
-  leaks.insert(newLeak);
+  leaks.insert(nextLeakId, newLeak);
   round.increment(1);
 }
+
+// Get Leak by id
+export circuit getLeak(id: Uint<64>): Leak {
+  assert(leaks.member(disclose(id)), "Leak does not exist");
+  return leaks.lookup(disclose(id));
+}
+
+// export circuit donate(id: Uint<64>, amount: Uint<64>): [] {
+//   assert(leaks.member(id), "Leak does not exist");
+//   const leak = leaks.lookup(id);
+//   const updatedLeak = Leak {
+//     id: leak.id,
+//     uri: leak.uri,
+//     donation_addr: leak.donation_addr,
+//     donated: leak.donated + amount
+//   };
+//   leaks.insert(id, updatedLeak);
+// }
+
+
+
 
 // Get Leak
 // Direct access by index is not supported for Set, so this function cannot be implemented as before.
