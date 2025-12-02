@@ -408,6 +408,13 @@
   dependencies:
     rxjs "^7.5.0"
 
+"@midnight-ntwrk/midnight-js-types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.1.0.tgz#7879d71a3d31f74a7021bb2b698eb6782b7d62c4"
+  integrity sha512-bU7f2gdXt1/BR2XatKNPx9o6FDq1exYcWLQg4kn78d1SX39OVD33PVOavg2mFMoeC00YpcG2T1xH0eD/CMwXgA==
+  dependencies:
+    rxjs "^7.5.0"
+
 "@midnight-ntwrk/midnight-js-utils@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-utils/-/midnight-js-utils-2.0.2.tgz#ef269f4008988a2d1219812e7caa31e63a10d578"
