@@ -394,17 +394,24 @@
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-network-id/-/midnight-js-network-id-2.0.2.tgz#fec73647d08eb664f8fdac8fd627d8b9ded2dfdb"
   integrity sha512-ogBBC5Ox2B2QZo4XxXYr3AxwgUeC4LEmLasLInjMk0p0m//8iI6NmH4/5f0pEOxDtGSuA+piuSonxuQMLM6GUg==
 
-"@midnight-ntwrk/midnight-js-node-zk-config-provider@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-node-zk-config-provider/-/midnight-js-node-zk-config-provider-2.0.2.tgz#e3f4dd9742b54e9c4bf79666b2e611d9a9fb8685"
-  integrity sha512-naOs3sEi1XpBudZEZQQOlO6q830rFNIgXQmEOC5upY2l5CmIheHFZZWTqvTeap1qxawSR0LeJxWkSsf69AGxyg==
+"@midnight-ntwrk/midnight-js-node-zk-config-provider@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-node-zk-config-provider/-/midnight-js-node-zk-config-provider-2.1.0.tgz#68c3712b7019c7630788128ac3f8fc7e95a06516"
+  integrity sha512-mKwGI4xYBRjpizn91v888EjVkRfxlCdOENQe2zHpL61oba50rL3UGatA3MziOdZQAA3fh0bF0W18wySyCHz1uQ==
   dependencies:
-    "@midnight-ntwrk/midnight-js-types" "2.0.2"
+    "@midnight-ntwrk/midnight-js-types" "2.1.0"
 
 "@midnight-ntwrk/midnight-js-types@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.0.2.tgz#c40083724d6a2d1ae7d47a9145429c3bbbb59c61"
   integrity sha512-ewHBQRCvY8u0+JAGdjQ86KsyoTA3dbNBLkuZ1o5U6vU/1jFjnFA1FL9skTgdXzSKjjfwA930i+OvbaUaUzFEHQ==
+  dependencies:
+    rxjs "^7.5.0"
+
+"@midnight-ntwrk/midnight-js-types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.1.0.tgz#7879d71a3d31f74a7021bb2b698eb6782b7d62c4"
+  integrity sha512-bU7f2gdXt1/BR2XatKNPx9o6FDq1exYcWLQg4kn78d1SX39OVD33PVOavg2mFMoeC00YpcG2T1xH0eD/CMwXgA==
   dependencies:
     rxjs "^7.5.0"
 
