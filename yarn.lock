@@ -375,17 +375,17 @@
     ws "^8.14.2"
     zen-observable-ts "^1.1.0"
 
-"@midnight-ntwrk/midnight-js-level-private-state-provider@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-level-private-state-provider/-/midnight-js-level-private-state-provider-2.0.2.tgz#f60b219daa50a879a4d0a238df36630d0bc9e6ad"
-  integrity sha512-lI/E5Fs4gVJ9LN4DEYbrssoz2YdWgfiIl6ZpQsc4o7QUCGAzKaK5hAPiQ5dgeL3G2eFbLWVxwpJFq9O5/oJyAg==
+"@midnight-ntwrk/midnight-js-level-private-state-provider@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-level-private-state-provider/-/midnight-js-level-private-state-provider-2.1.0.tgz#d2889ee7c977fc46d3b4f43d676f7516bc7239ad"
+  integrity sha512-sTRbDu1LVoghoYMOfsKmwUMhKIO56lDj+N9YGUdLE0M4HgL5Q7xi0Md7JzZmeOCQEyStVNCae1gTdEFsUD4MCQ==
   dependencies:
-    "@midnight-ntwrk/midnight-js-types" "2.0.2"
-    abstract-level "^2.0.0"
+    "@midnight-ntwrk/midnight-js-types" "2.1.0"
+    abstract-level "^3.0.0"
     buffer "^6.0.3"
     fp-ts "^2.16.1"
     io-ts "^2.2.20"
-    level "^9.0.0"
+    level "^10.0.0"
     lodash "^4.17.21"
     superjson "^2.0.0"
 
@@ -405,6 +405,13 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.0.2.tgz#c40083724d6a2d1ae7d47a9145429c3bbbb59c61"
   integrity sha512-ewHBQRCvY8u0+JAGdjQ86KsyoTA3dbNBLkuZ1o5U6vU/1jFjnFA1FL9skTgdXzSKjjfwA930i+OvbaUaUzFEHQ==
+  dependencies:
+    rxjs "^7.5.0"
+
+"@midnight-ntwrk/midnight-js-types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.1.0.tgz#7879d71a3d31f74a7021bb2b698eb6782b7d62c4"
+  integrity sha512-bU7f2gdXt1/BR2XatKNPx9o6FDq1exYcWLQg4kn78d1SX39OVD33PVOavg2mFMoeC00YpcG2T1xH0eD/CMwXgA==
   dependencies:
     rxjs "^7.5.0"
 
@@ -952,14 +959,14 @@ abort-controller@^3.0.0:
   dependencies:
     event-target-shim "^5.0.0"
 
-abstract-level@^2.0.0, abstract-level@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/abstract-level/-/abstract-level-2.0.2.tgz#8d965e731afb42a72f163874410c1687fb2e4bdb"
-  integrity sha512-pPJixmXk/kTKLB2sSue7o4Uj6TlLD2XfaP2gWZomHVCC6cuUGX/VslQqKG1yZHfXwBb/3lS6oSTMPGzh1P1iig==
+abstract-level@^3.0.0, abstract-level@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/abstract-level/-/abstract-level-3.1.1.tgz#d61a7ae1a5cff15f315592a4cfa3259489ac2388"
+  integrity sha512-CW2gKbJFTuX1feMvOrvsVMmijAOgI9kg2Ie9Dq3gOcMt/dVVoVmqNlLcEUCT13NxHFMEajcUcVBIplbyDroDiw==
   dependencies:
     buffer "^6.0.3"
     is-buffer "^2.0.5"
-    level-supports "^6.0.0"
+    level-supports "^6.2.0"
     level-transcoder "^1.0.1"
     maybe-combine-errors "^1.0.0"
     module-error "^1.0.1"
@@ -1162,12 +1169,12 @@ braces@^3.0.3:
   dependencies:
     fill-range "^7.1.1"
 
-browser-level@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/browser-level/-/browser-level-2.0.0.tgz#cc63eb1322e67c44489d7fbdda5c30a2db7b59da"
-  integrity sha512-RuYSCHG/jwFCrK+KWA3dLSUNLKHEgIYhO5ORPjJMjCt7T3e+RzpIDmYKWRHxq2pfKGXjlRuEff7y7RESAAgzew==
+browser-level@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/browser-level/-/browser-level-3.0.0.tgz#158287e21f44051cc06bf05abc235b385e66d264"
+  integrity sha512-kGXtLh29jMwqKaskz5xeDLtCtN1KBz/DbQSqmvH7QdJiyGRC7RAM8PPg6gvUiNMa+wVnaxS9eSmEtP/f5ajOVw==
   dependencies:
-    abstract-level "^2.0.1"
+    abstract-level "^3.1.0"
 
 buffer-crc32@^1.0.0:
   version "1.0.0"
@@ -1239,12 +1246,12 @@ chownr@^1.1.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
-classic-level@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/classic-level/-/classic-level-2.0.0.tgz#6fd9ca686bbcd645e35caaf403c3f3a56495d11b"
-  integrity sha512-ftiMvKgCQK+OppXcvMieDoYlYLYWhScK6yZRFBrrlHQRbm4k6Gr+yDgu/wt3V0k1/jtNbuiXAsRmuAFcD0Tx5Q==
+classic-level@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/classic-level/-/classic-level-3.0.0.tgz#2be00defbaf7d204ac33da77988993c6c337ba67"
+  integrity sha512-yGy8j8LjPbN0Bh3+ygmyYvrmskVita92pD/zCoalfcC9XxZj6iDtZTAnz+ot7GG8p9KLTG+MZ84tSA4AhkgVZQ==
   dependencies:
-    abstract-level "^2.0.0"
+    abstract-level "^3.1.0"
     module-error "^1.0.1"
     napi-macros "^2.2.2"
     node-gyp-build "^4.3.0"
@@ -1979,7 +1986,7 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-level-supports@^6.0.0:
+level-supports@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/level-supports/-/level-supports-6.2.0.tgz#e78b228973a24acdc5199c5f51e244e70f26c611"
   integrity sha512-QNxVXP0IRnBmMsJIh+sb2kwNCYcKciQZJEt+L1hPCHrKNELllXhvrlClVHXBYZVT+a7aTSM6StgNXdAldoab3w==
@@ -1992,14 +1999,14 @@ level-transcoder@^1.0.1:
     buffer "^6.0.3"
     module-error "^1.0.1"
 
-level@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/level/-/level-9.0.0.tgz#880aa9d341a5411e36bed77f4fa233f425b492a8"
-  integrity sha512-n+mVuf63mUEkd8NUx7gwxY+QF5vtkibv6fXTGUgtHWLPDaA5/XZjLcI/Q1nQ8k6OttHT6Ezt+7nSEXsRUfHtOQ==
+level@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/level/-/level-10.0.0.tgz#60ced77f7b2afdcc0e4249ac283dd3170f54e39b"
+  integrity sha512-aZJvdfRr/f0VBbSRF5C81FHON47ZsC2TkGxbBezXpGGXAUEL/s6+GP73nnhAYRSCIqUNsmJjfeOF4lzRDKbUig==
   dependencies:
-    abstract-level "^2.0.1"
-    browser-level "^2.0.0"
-    classic-level "^2.0.0"
+    abstract-level "^3.1.0"
+    browser-level "^3.0.0"
+    classic-level "^3.0.0"
 
 levn@^0.4.1:
   version "0.4.1"
