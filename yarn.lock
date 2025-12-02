@@ -358,14 +358,14 @@
     fetch-retry "^6.0.0"
     lodash "^4.17.21"
 
-"@midnight-ntwrk/midnight-js-indexer-public-data-provider@2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-indexer-public-data-provider/-/midnight-js-indexer-public-data-provider-2.0.2.tgz#a5184f3f8c22683296a81b59d59a31c1a9a42056"
-  integrity sha512-yn2EriaclSNUwZqZNsgJv//6vPkW2NrA84e9S6zs7KEDDoCobtiFBlOHR54IXM2fNs3DnAojsVZiQaTY0Lq4vQ==
+"@midnight-ntwrk/midnight-js-indexer-public-data-provider@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-indexer-public-data-provider/-/midnight-js-indexer-public-data-provider-2.1.0.tgz#d4f6dd5d1d14235f25b8270cdef22934aeafb196"
+  integrity sha512-Hmj4wcF7WmGvLrRjz9xvMu0GPop/FxbwNumsuR+mnw7EYf3Y/6JRQeIZ0Ga+eD1VM5JaUJ8A+I8iGZMcpQ36TA==
   dependencies:
     "@apollo/client" "^3.13.8"
-    "@midnight-ntwrk/midnight-js-network-id" "2.0.2"
-    "@midnight-ntwrk/midnight-js-types" "2.0.2"
+    "@midnight-ntwrk/midnight-js-network-id" "2.1.0"
+    "@midnight-ntwrk/midnight-js-types" "2.1.0"
     buffer "^6.0.3"
     cross-fetch "^4.0.0"
     graphql "^16.8.0"
@@ -394,6 +394,11 @@
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-network-id/-/midnight-js-network-id-2.0.2.tgz#fec73647d08eb664f8fdac8fd627d8b9ded2dfdb"
   integrity sha512-ogBBC5Ox2B2QZo4XxXYr3AxwgUeC4LEmLasLInjMk0p0m//8iI6NmH4/5f0pEOxDtGSuA+piuSonxuQMLM6GUg==
 
+"@midnight-ntwrk/midnight-js-network-id@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-network-id/-/midnight-js-network-id-2.1.0.tgz#12b242c95442d5ba41e69b6f86c96fbf916263c7"
+  integrity sha512-uYIxvYNbrjCQW4ntJz/kKWZUeoBX4ahYaI9k37GrX02EJRPs7wJ+3iIJstTiL36JUxJUyTkePufL+lFgTadP8A==
+
 "@midnight-ntwrk/midnight-js-node-zk-config-provider@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-node-zk-config-provider/-/midnight-js-node-zk-config-provider-2.0.2.tgz#e3f4dd9742b54e9c4bf79666b2e611d9a9fb8685"
@@ -405,6 +410,13 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.0.2.tgz#c40083724d6a2d1ae7d47a9145429c3bbbb59c61"
   integrity sha512-ewHBQRCvY8u0+JAGdjQ86KsyoTA3dbNBLkuZ1o5U6vU/1jFjnFA1FL9skTgdXzSKjjfwA930i+OvbaUaUzFEHQ==
+  dependencies:
+    rxjs "^7.5.0"
+
+"@midnight-ntwrk/midnight-js-types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-types/-/midnight-js-types-2.1.0.tgz#7879d71a3d31f74a7021bb2b698eb6782b7d62c4"
+  integrity sha512-bU7f2gdXt1/BR2XatKNPx9o6FDq1exYcWLQg4kn78d1SX39OVD33PVOavg2mFMoeC00YpcG2T1xH0eD/CMwXgA==
   dependencies:
     rxjs "^7.5.0"
 
@@ -752,11 +764,6 @@
   integrity sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==
   dependencies:
     "@types/node" "*"
-
-"@types/zen-observable@0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.3.tgz#781d360c282436494b32fe7d9f7f8e64b3118aa3"
-  integrity sha512-fbF6oTd4sGGy0xjHPKAt+eS2CrxJ3+6gQ3FGcBoIJR2TLAyCkCyI8JqZNy+FeON0AhVgNJoUumVoZQjBFUqHkw==
 
 "@typescript-eslint/eslint-plugin@^8.39.1":
   version "8.40.0"
@@ -3177,15 +3184,7 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zen-observable-ts@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-1.1.0.tgz#2d1aa9d79b87058e9b75698b92791c1838551f83"
-  integrity sha512-1h4zlLSqI2cRLPJUHJFL8bCWHhkpuXkF+dbGkRaWjgDIG26DmzyshUMrdV/rL3UnR+mhaX4fRq8LPouq0MYYIA==
-  dependencies:
-    "@types/zen-observable" "0.8.3"
-    zen-observable "0.8.15"
-
-zen-observable-ts@^1.2.5:
+zen-observable-ts@^1.1.0, zen-observable-ts@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-1.2.5.tgz#6c6d9ea3d3a842812c6e9519209365a122ba8b58"
   integrity sha512-QZWQekv6iB72Naeake9hS1KxHlotfRpe+WGNbNx5/ta+R3DNjVO2bswf63gXlWDcs+EMd7XY8HfVQyP1X6T4Zg==
