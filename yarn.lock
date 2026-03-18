@@ -332,12 +332,12 @@
   resolved "https://registry.yarnpkg.com/@js-sdsl/ordered-map/-/ordered-map-4.4.2.tgz#9299f82874bab9e4c7f9c48d865becbfe8d6907c"
   integrity sha512-iUKgm52T8HOE/makSxjqoWhe95ZJA1/G1sYsGev2JDKUSS14KAgg1LHb+Ba+IPow0xflbnSkOsZcO08C7w1gYw==
 
-"@midnight-ntwrk/compact-runtime@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/compact-runtime/-/compact-runtime-0.9.0.tgz#2b0eb0d3f4dd3b95f152996608c08f3460e2b340"
-  integrity sha512-Dsms+SWRWlaTIay4SO7ITxTJvo8lgEKkMss+dQnIZDnEoCEO5lHTSj4TckBAvyYSWm4KElN3tir/MVm5hHgfDA==
+"@midnight-ntwrk/compact-runtime@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/compact-runtime/-/compact-runtime-0.15.0.tgz#399021d6e35d3cf25e4bc4ba56f19d5396bbe167"
+  integrity sha512-6+odrxb83ZZwF29SqNBBgaOR3hf5ej4KZVGibDwdXta9+uiv6qYW0fMrsKP9S+c2AqvY+vEb5NEFFI54lA7G5A==
   dependencies:
-    "@midnight-ntwrk/onchain-runtime" "^0.3.0"
+    "@midnight-ntwrk/onchain-runtime-v3" "^3.0.0"
     "@types/object-inspect" "^1.8.1"
     object-inspect "^1.12.3"
 
@@ -422,10 +422,10 @@
   resolved "https://registry.yarnpkg.com/@midnight-ntwrk/midnight-js-utils/-/midnight-js-utils-2.1.0.tgz#105aedfc3adf53f758ef0682a474bb7a920af817"
   integrity sha512-AKtpmqY82NyM/wOzTT3vVjfXH7NKWcMeXHIxFeNracvszgr5z7tQsFqrGTws6M7CHZ+/Gn1FGP+Goi/DluE9SA==
 
-"@midnight-ntwrk/onchain-runtime@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/onchain-runtime/-/onchain-runtime-0.3.0.tgz#48f44f2aa2123f4009bbe3b191dd162c053c8e0a"
-  integrity sha512-vZWPoz7MhXO5UgWZET50g7APOcT5dbAfADDcrSreeOagV8lj7JJzlnYIIhrcUaMOv+NHWxPaUcJUYUkmu9LoTA==
+"@midnight-ntwrk/onchain-runtime-v3@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@midnight-ntwrk/onchain-runtime-v3/-/onchain-runtime-v3-3.0.0.tgz#6b9ddf0dc09c8040175e5b40433bf0ff79425d72"
+  integrity sha512-HbFbUOsvgpEFy1OT0Ni2LMFk4jnMQS1em+H+Mof/B3DpnNKl0Lkx5QiulKOc6pyU4KPEagOqx4fYNyVXFwgZ7g==
 
 "@midnight-ntwrk/wallet-api@5.0.0", "@midnight-ntwrk/wallet-api@^5.0.0":
   version "5.0.0"
